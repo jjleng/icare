@@ -1,0 +1,61 @@
+<table>
+  <tr>
+    <!-- Posts -->
+    <td class="posts">
+      <table class="posts">
+        <% if !@posts.nil? %>
+            <% @posts.each do |post| %>
+                <tr>
+                  <td>
+            <span class="post_title">
+              <%= truncate_wrap_link post.title, post, 60, 35 %>
+            </span>
+            <span class="post_price">
+              <%= price post.price.to_i %>
+            </span>
+            <span class="post_content">
+              <%= truncate_wrap_text post.content, 140, 35 %>
+            </span>
+                  </td>
+                </tr>
+            <% end %>
+        <% end %>
+      </table>
+    </td>
+
+    <!-- Photo Gallery -->
+    <td class="photo_gallery">
+
+    </td>
+  </tr>
+</table>
+
+<!--
+<table>
+  <tr>
+    <th>Title</th>
+    <th>Content</th>
+    <th>Location</th>
+    <th></th>
+    <th></th>
+    <th></th>
+  </tr>
+<% if !@posts.nil? %>
+    <% @posts.each do |post| %>
+  <tr>
+    <td><%= post.title %></td>
+    <td><%= post.content %></td>
+    <td><%= post.location %></td>
+    <td><%= link_to 'Show', post %></td>
+    <td><%= link_to 'Edit', edit_post_path(post) %></td>
+    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
+  </tr>
+<% end %>
+<% end %>
+</table>
+-->
+
+<br/>
+
+<%= link_to 'New Post', new_post_path %>
+

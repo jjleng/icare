@@ -7,6 +7,10 @@ gem 'rails', '3.0.9'
 
 gem 'sqlite3'
 
+gem 'gmaps4rails'
+
+gem 'geokit-rails3'
+
 group :test do
   gem 'rspec-rails'
   gem 'webrat'
@@ -16,6 +20,10 @@ group :development do
   gem 'rspec-rails'
 end
 
+gem 'ruby-debug19'
+
+gem 'pg'
+
 # Use unicorn as the web server
 # gem 'unicorn'
 
@@ -24,7 +32,7 @@ end
 
 # To use debugger (ruby-debug for Ruby 1.8.7+, ruby-debug19 for Ruby 1.9.2+)
 # gem 'ruby-debug'
-# gem 'ruby-debug19', :require => 'ruby-debug'
+
 
 # Bundle the extra gems:
 # gem 'bj'

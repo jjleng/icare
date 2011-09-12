@@ -1,0 +1,17 @@
+<!-- gallery div start -->
+<div class="gallery">
+
+  <% if !@photo_gallery.nil? %>
+      <% @photo_gallery.each do |pg| %>
+          <div class=pg.css_class>
+            <% logo = image_tag("rails.png", :alt => "Photo Gallery") %>
+            <%= link_to logo, root_path %>
+          </div>
+      <% end %>
+  <% end %>
+
+</div>
+<!-- gallery div end -->
+
+<!-- clear both div -->
+<div class="clear">&nbsp;</div>

@@ -1,0 +1,112 @@
+.container {
+    width: 800px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+/*============================================*/
+/* Header Image */
+header img {
+    margin-top: 1em;
+}
+
+/* Header Navigation */
+nav {
+    float: right;
+}
+
+nav li {
+    list-style-type: none;
+    display: inline-block;
+    padding: 0.2em 0;
+    font-size: 12px;
+}
+
+nav li a {
+    padding: 0 5px;
+    text-decoration: none;
+}
+
+nav li a:hover {
+    color: gray;
+    background: #2a6da9;
+}
+
+/*============================================*/
+
+/* Body */
+.canvas {
+    min-height: 500px;
+    background: #2a6da9;
+}
+
+section {
+    margin-top: 1em;
+    font-size: 120%;
+    padding: 20px;
+    background: #fff;
+    border: 1px;
+}
+
+/*============================================*/
+
+.gradient {
+    /* default background colour, for all layout engines that don't implement gradients */
+    background: #2a6da9;
+
+    /* gecko based browsers */
+    background: -moz-linear-gradient(top, #55aaee, #003366);
+
+    /* webkit based browsers */
+    background: -webkit-gradient(linear, left top, left bottom, from(#55aaee), to(#003366));
+
+    color: #000000; /* text colour (black) */
+    height: auto; /* gradient uses the full height of the element */
+    padding: 5px; /* distance from border edge to text */
+}
+
+/*=============================================*/
+
+/* Post */
+table.posts {
+    width: 450px;
+    margin-top: 0em;
+}
+
+table.posts tr {
+    height: 100px;
+}
+
+table.posts tr td {
+    border-top: 1px solid #ccc;
+    vertical-align: top;
+    padding-top: 10px;
+}
+
+table.posts tr td .post_title a {
+    margin-top: 0em;
+    vertical-align: top;
+    color: #104E8B;
+    text-decoration: none;
+    font-size: 85%;
+    font-weight: bold;
+}
+
+table.posts tr td .post_title a:hover {
+    background: #ffffff;
+    text-decoration: underline;
+}
+
+
+table.posts tr td .post_price {
+    float: right;
+    font-family: monaco;
+    font-weight: bold;
+    font-size: 120%;
+}
+
+table.posts tr td .post_content {
+    display: block;
+    font-size: 85%;
+}
+
