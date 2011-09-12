@@ -20,7 +20,13 @@ group :development do
   gem 'rspec-rails'
 end
 
-gem 'ruby-debug19'
+group :development, :test do
+  if RUBY_VERSION =~ /1.9/
+    gem 'ruby-debug19'
+  else
+    gem 'ruby-debug'
+  end
+end
 
 gem 'pg'
 
