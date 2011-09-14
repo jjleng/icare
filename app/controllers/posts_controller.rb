@@ -26,6 +26,7 @@ class PostsController < ApplicationController
   # GET /posts/new.xml
   def new
     @post = Post.new
+    4.times {@post.assets.build}
 
     respond_to do |format|
       format.html # new.html.erb

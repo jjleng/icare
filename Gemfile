@@ -30,6 +30,11 @@ end
 
 gem 'pg'
 
+gem 'paperclip'
+
+gem 'rmagick'
+
+gem 'aws-s3'
 # Use unicorn as the web server
 # gem 'unicorn'
 
