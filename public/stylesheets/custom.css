@@ -4,6 +4,8 @@
     margin-right: auto;
 }
 
+.clearboth { clear: both; }
+
 /*============================================*/
 /* Header Image */
 header img {
@@ -23,6 +25,7 @@ nav li {
 }
 
 nav li a {
+    color: black;
     padding: 0 5px;
     text-decoration: none;
 }
@@ -83,6 +86,10 @@ table.posts tr td {
     padding-top: 10px;
 }
 
+table.posts tr td .post_title {
+
+}
+
 table.posts tr td .post_title a {
     margin-top: 0em;
     vertical-align: top;
@@ -97,12 +104,11 @@ table.posts tr td .post_title a:hover {
     text-decoration: underline;
 }
 
-
 table.posts tr td .post_price {
-    float: right;
-    font-family: monaco;
+    color: #cc0000;
+    font-size: 85%;
     font-weight: bold;
-    font-size: 120%;
+    margin-right: 1em;
 }
 
 table.posts tr td .post_content {
@@ -110,3 +116,17 @@ table.posts tr td .post_content {
     font-size: 85%;
 }
 
+table.posts .post_thumb {
+    float: left;
+    width: 100px;
+    margin-right: 2px;
+}
+
+table.posts .post_meta
+{
+    display: block;
+    font-size: 85%;
+    color: #999999;
+    float: left;
+    margin-right: 1em;
+}

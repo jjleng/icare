@@ -9,7 +9,7 @@ class Asset < ActiveRecord::Base
                     },
                     :storage => :s3,
                     :bucket => 'media.smartbee.heroku.com',
-                    :s3_permissions => :private,
+
                     #:path => "photos/:id/:filename",
                     :s3_credentials => {
                         :access_key_id => ENV['S3_KEY'],

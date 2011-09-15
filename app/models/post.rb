@@ -8,7 +8,16 @@ class Post < ActiveRecord::Base
   has_many :assets, :dependent => :destroy
   accepts_nested_attributes_for :assets
 
+  before_save :extract_city
+
   def gmaps4rails_address
     location
   end
+
+  private
+
+  def extract_city
+    self.city = GeoKit::Geocoders::GoogleGeocoder.geocode(location).city
+  end
+
 end

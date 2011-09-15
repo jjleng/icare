@@ -10,7 +10,7 @@
 #
 # It's strongly recommended to check this file into your version control system.
 
-ActiveRecord::Schema.define(:version => 20110912233707) do
+ActiveRecord::Schema.define(:version => 20110915060119) do
 
   create_table "assets", :force => true do |t|
     t.integer  "post_id"
@@ -43,6 +43,7 @@ ActiveRecord::Schema.define(:version => 20110912233707) do
     t.float    "latitude"
     t.float    "longitude"
     t.boolean  "gmaps"
+    t.string   "city"
   end
 
 end

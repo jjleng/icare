@@ -1,3 +1,9 @@
+<div>
+
+</div>
+
+
+
 <table>
   <tr>
     <!-- Posts -->
@@ -7,15 +13,40 @@
             <% @posts.each do |post| %>
                 <tr>
                   <td>
-            <span class="post_title">
-              <%= truncate_wrap_link post.title, post, 60, 35 %>
-            </span>
-            <span class="post_price">
-              <%= price post.price.to_i %>
-            </span>
-            <span class="post_content">
-              <%= truncate_wrap_text post.content, 140, 35 %>
-            </span>
+                    <span class="post_price">
+                      <%= price post.price.to_i %>
+                    </span>
+
+                    <span class="post_title">
+                      <%= truncate_wrap_link post.title, post, 60, 35 %>
+                    </span>
+
+                    <span class="post_content">
+                      <%= truncate_wrap_text post.content, 140, 35 %>
+                    </span>
+                    <br>
+
+                    <!-- Photo thumbs -->
+                    <% post.assets.each do |asset| %>
+
+                        <div class="post_thumb">
+                          <%= image_tag asset.image(:thumb) %>
+                        </div>
+
+                    <% end %>
+
+                    <br class="clearboth">
+
+                    <div class="post_meta">
+                      <%= time_ago_in_words(post.created_at) %> ago
+                    </div>
+
+
+
+                    <div class="post_meta">
+                      <%= post.city %>
+                    </div>
+
                   </td>
                 </tr>
             <% end %>
