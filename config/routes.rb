@@ -1,6 +1,6 @@
 Icare::Application.routes.draw do
   resources :posts
-  match '/search', :to=>'geo_search#search'
+  match '/geo_search', :to=>'geo_search#search'
   root :to => "posts#index"
 
   # The priority is based upon order of creation:
