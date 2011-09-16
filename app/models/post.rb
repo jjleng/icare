@@ -14,6 +14,24 @@ class Post < ActiveRecord::Base
     location
   end
 
+  def gmaps4rails_infowindow
+    if self.assets && self.assets.first && self.assets.first.image
+      picture = self.assets.first.image.url(:thumb)
+    end
+    "<h1>#{title}</h1> <br> <img src='#{picture}'>"
+  end
+
+  #def gmaps4rails_marker_picture
+  #  if self.assets && self.assets.first && self.assets.first.image
+  #    picture = self.assets.first.image.url(:thumb)
+  #  end
+  #  {
+  #      "picture" => picture, # string, mandatory
+  #      "width" => "25", # string, mandatory
+  #      "height" => "25" # string, mandatory
+  #  }
+  #end
+
   private
 
   def extract_city
