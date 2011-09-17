@@ -20,19 +20,24 @@ nav {
 nav li {
     list-style-type: none;
     display: inline-block;
-    padding: 0.2em 0;
+    padding: 1em 0;
     font-size: 12px;
 }
 
 nav li a {
-    color: black;
+    color: #009999;
     padding: 0 5px;
     text-decoration: none;
 }
 
 nav li a:hover {
-    color: gray;
-    background: #2a6da9;
+    text-decoration: underline;
+    background-color: transparent;
+
+}
+
+nav li a:visited {
+    color: #009999;
 }
 
 /*============================================*/
@@ -40,7 +45,7 @@ nav li a:hover {
 /* Body */
 .canvas {
     min-height: 500px;
-    background: #2a6da9;
+    background: #666666;
 }
 
 section {

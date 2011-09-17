@@ -1,4 +1,6 @@
 Icare::Application.routes.draw do
+  devise_for :users
+
   resources :posts
   match '/geo_search', :to=>'geo_search#search'
   root :to => "posts#index"
