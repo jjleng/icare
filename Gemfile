@@ -35,6 +35,10 @@ gem 'paperclip'
 gem 'rmagick'
 
 gem 'aws-s3'
+
+gem 'devise'
+
+gem 'jquery-rails'
 # Use unicorn as the web server
 # gem 'unicorn'
 
