@@ -1,7 +1,12 @@
-<%= image_tag("icare.png", :alt => "iCare") %>
+<%= link_to image_tag("icare.png", :alt => "iCare"), root_path, :class => "logo_link" %>
 <nav class="header_nav">
   <ul>
-    <li><%= link_to("Home", "#") %></li>
+    <% if user_signed_in? %>
+    <li>
+      <%= "#{current_user.email}" %>
+    </li>
+        <% end %>
+    <li><%= link_to("Home", root_path) %></li>
 
     <% if user_signed_in? %>
         <li>

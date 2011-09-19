@@ -4,7 +4,21 @@
     margin-right: auto;
 }
 
-.clearboth { clear: both; }
+.clearboth {
+    clear: both;
+}
+
+/*Overwrite blueprint notice*/
+.notice {
+    background: #e6efc2;
+    color: #264409;
+    border-color: #c6d880;
+}
+
+/*logo link*/
+a.logo_link:hover {
+    background: transparent;
+}
 
 /*============================================*/
 /* Header Image */
@@ -31,6 +45,7 @@ nav li a {
 }
 
 nav li a:hover {
+    color: #009999;
     text-decoration: underline;
     background-color: transparent;
 
@@ -105,7 +120,7 @@ table.posts tr td .post_title a {
 }
 
 table.posts tr td .post_title a:hover {
-    background: #ffffff;
+    background: transparent;
     text-decoration: underline;
 }
 
@@ -127,11 +142,12 @@ table.posts .post_thumb {
     margin-right: 2px;
 }
 
-table.posts .post_meta
-{
+table.posts .post_meta {
     display: block;
     font-size: 85%;
     color: #999999;
     float: left;
     margin-right: 1em;
 }
+
+

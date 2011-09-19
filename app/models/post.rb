@@ -18,7 +18,7 @@ class Post < ActiveRecord::Base
     if self.assets && self.assets.first && self.assets.first.image
       picture = self.assets.first.image.url(:thumb)
     end
-    "<h1>#{title}</h1> <br> <img src='#{picture}'>"
+    "#{title} <br> <p> <img src='#{picture}'> </p>"
   end
 
   #def gmaps4rails_marker_picture
