@@ -1,2 +1,13 @@
+<% form_tag :geo_search, :method=>':get', :remote=>true do %>
+    <div class="field">
+      With in <%= text_field_tag :within %> miles from <%= text_field_tag :origin %>
+    </div>
+    <div class="actions">
+       <%= submit_tag "Search" %>
+    </div>
+<% end %>
 
-<%= gmaps4rails(@json) %>
+<div id="gamp_container">
+  <%= gmaps4rails(@json) %>
+</div>
+

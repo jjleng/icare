@@ -1,5 +1,11 @@
 require 'spec_helper'
 
 describe Post do
-  pending "add some examples to (or delete) #{__FILE__}"
+
+  it "can be saved" do
+    expect
+    {
+
+    }.should change(:Post, :count).by(1)
+  end
 end

@@ -3,7 +3,9 @@
 <head>
   <title><%= title %></title>
   <%= yield :head %>
+  <%= yield :scripts %>
   <%= render 'layouts/stylesheets' %>
+
 </head>
 
 <body class="canvas">
@@ -22,7 +24,7 @@
 
 </div>
 
-<%= yield :scripts %>
+
 
 </body>
 </html>
