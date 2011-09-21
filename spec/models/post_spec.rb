@@ -6,6 +6,6 @@ describe Post do
     expect
     {
 
-    }.should change(:Post, :count).by(1)
+    }.should change(Post, :count).by(1)
   end
 end

@@ -12,13 +12,9 @@ gem 'gmaps4rails'
 gem 'geokit-rails3'
 
 group :test do
-  gem 'rspec-rails'
   gem 'webrat'
 end
 
-group :development do
-  gem 'rspec-rails'
-end
 
 group :development, :test do
   if RUBY_VERSION =~ /1.9/
@@ -26,6 +22,11 @@ group :development, :test do
   else
     gem 'ruby-debug'
   end
+
+  gem 'rspec-rails'
+
+  gem 'factory_girl_rails'
+
 end
 
 gem 'pg'
