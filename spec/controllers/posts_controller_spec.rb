@@ -20,11 +20,16 @@ require 'spec_helper'
 
 describe PostsController do
 
+  before(:each) do
+    user = Factory(:valid_user)
+    sign_in user
+  end
+
   # This should return the minimal set of attributes required to create a valid
   # Post. As you add validations to Post, be sure to
   # update the return value of this method accordingly.
   def valid_attributes
-    {}
+    {:title => "hello title"}
   end
 
   describe "GET index" do

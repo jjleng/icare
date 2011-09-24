@@ -22,17 +22,6 @@ ActiveRecord::Schema.define(:version => 20110916234432) do
     t.datetime "image_updated_at"
   end
 
-  create_table "photos", :force => true do |t|
-    t.string   "name"
-    t.string   "relative_path"
-    t.string   "absolute_path"
-    t.datetime "created_at"
-    t.datetime "updated_at"
-    t.integer  "user_id"
-  end
-
-  add_index "photos", ["user_id"], :name => "index_photos_on_user_id"
-
   create_table "posts", :force => true do |t|
     t.string   "title"
     t.text     "content"

@@ -15,7 +15,4 @@ class GeoSearchController < ApplicationController
 
   end
 
-  def show
-  end
-
 end
