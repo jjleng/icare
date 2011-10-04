@@ -37,6 +37,7 @@
       <% f.fields_for :assets do |asset| %>
           <% if asset.object.new_record? %>
               <%= asset.file_field :image %>
+              <br>
           <% end %>
       <% end %>
 

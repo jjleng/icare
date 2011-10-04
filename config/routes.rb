@@ -2,7 +2,9 @@ Icare::Application.routes.draw do
   devise_for :users
 
   resources :posts
+
   match '/geo_search', :to=>'geo_search#search'
+  match '/search', :to => 'posts#search'
   root :to => "posts#index"
 
   # The priority is based upon order of creation:

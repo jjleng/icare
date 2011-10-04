@@ -40,6 +40,10 @@ gem 'aws-s3'
 gem 'devise'
 
 gem 'jquery-rails'
+
+gem 'sunspot_rails'
+
+gem 'will_paginate'
 # Use unicorn as the web server
 # gem 'unicorn'
 

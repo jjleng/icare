@@ -1,18 +1,29 @@
 <p>
-  <b>Title:</b>
+  <%= price @post.price.to_i %>
   <%= @post.title %>
 </p>
 
-<p>
-  <b>Content:</b>
+<p class="post_content">
   <%= @post.content %>
 </p>
 
-<p>
-  <b>Location:</b>
+<p >
   <%= @post.location %>
 </p>
+<br>
 
+<% @post.assets.each do |asset| %>
 
-<%= link_to 'Edit', edit_post_path(@post) %> |
-<%= link_to 'Back', posts_path %>
+    <div >
+      <%= image_tag asset.image(:original), :class => "post_original" %>
+    </div>
+
+<% end %>
+
+<br class="clear display_block">
+
+<p>
+  <br>
+<%= link_to 'Edit', edit_post_path(@post), :class => "clear_both" %> |
+<%= link_to 'Back', posts_path, :class => "clear_both" %>
+</p>

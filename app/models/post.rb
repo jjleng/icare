@@ -1,3 +1,5 @@
+require 'sunspot_rails'
+
 class Post < ActiveRecord::Base
   validates :title, :presence => true
 
@@ -12,6 +14,10 @@ class Post < ActiveRecord::Base
 
   has_many :assets, :dependent => :destroy
   accepts_nested_attributes_for :assets
+
+  searchable do
+    text :title, :content, :location
+  end
 
   before_save :extract_city
 

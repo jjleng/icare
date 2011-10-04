@@ -1,4 +1,10 @@
 <%= link_to image_tag("icare.png", :alt => "iCare"), root_path, :class => "logo_link" %>
+<div class="search">
+  <% form_tag search_path, :method => :get do %>
+    <%= text_field_tag :search, params[:search] %>
+      <%= submit_tag "Search", :name => nil %>
+  <% end %>
+</div>
 <nav class="header_nav">
   <ul>
     <% if user_signed_in? %>

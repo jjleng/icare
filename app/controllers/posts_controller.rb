@@ -1,11 +1,20 @@
 require 'geokit'
 class PostsController < ApplicationController
-  before_filter :authenticate_user!, :except => [:index, :show]
+  before_filter :authenticate_user!, :except => [:index, :show, :search]
+
+  def search
+    @search = Post.search do
+      fulltext params[:search]
+    end
+    @posts = @search.results
+
+    render 'index'
+  end
+
   # GET /posts
   # GET /posts.xml
   def index
-    @posts = Post.all(:order=>"created_at DESC")
-
+    @posts = Post.paginate(:page => params[:page]).all(:order=>"created_at DESC")
 
     respond_to do |format|
       format.html # index.html.erb

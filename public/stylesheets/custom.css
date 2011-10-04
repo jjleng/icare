@@ -8,6 +8,10 @@
     clear: both;
 }
 
+.display_block{
+    display: block;
+}
+
 /*Overwrite blueprint notice*/
 .notice {
     background: #e6efc2;
@@ -23,7 +27,16 @@ a.logo_link:hover {
 /*============================================*/
 /* Header Image */
 header img {
+    float: left;
     margin-top: 1em;
+}
+
+div.search
+{
+    float: left;
+    margin-top: 1em;
+    margin-left: 3em;
+
 }
 
 /* Header Navigation */
@@ -64,7 +77,8 @@ nav li a:visited {
 }
 
 section {
-    margin-top: 1em;
+    clear: both;
+    margin-top: 0em;
     font-size: 120%;
     padding: 20px;
     background: #fff;
@@ -93,7 +107,7 @@ section {
 /* Post */
 table.posts {
     width: 450px;
-    margin-top: 0em;
+    margin-top: 1em;
 }
 
 table.posts tr {
@@ -131,23 +145,38 @@ table.posts tr td .post_price {
     margin-right: 1em;
 }
 
-table.posts tr td .post_content {
+.post_content {
     display: block;
     font-size: 85%;
 }
 
-table.posts .post_thumb {
+.post_thumb {
     float: left;
     width: 100px;
     margin-right: 2px;
 }
 
-table.posts .post_meta {
+.post_original {
+    float: left;
+    width: 200px;
+    margin-left: 2px;
+}
+
+.post_meta {
     display: block;
     font-size: 85%;
     color: #999999;
     float: left;
     margin-right: 1em;
+}
+
+
+
+.filter_field
+{
+    float: left;
+    font-size: 85%;
+    margin-right: 3px;
 }
 
 
