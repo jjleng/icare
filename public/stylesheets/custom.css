@@ -1,7 +1,23 @@
 .container {
-    width: 800px;
+    width: 710px;
     margin-left: auto;
     margin-right: auto;
+    background: transparent;
+}
+
+
+#content_wrapper {
+  background-color: whitesmoke;
+  padding: 1.5em;
+  margin: -1.5em;
+  width: 710px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -moz-box-shadow: 0 0 5px 5px #888;
+  -webkit-box-shadow: 0 0 5px 5px#888;
+  box-shadow: 0 0 5px 5px #888;
+  z-index: 1;
 }
 
 .clearboth {
@@ -52,20 +68,23 @@ nav li {
 }
 
 nav li a {
-    color: #009999;
+    #color: #009999;
+    color: #5086B0;
     padding: 0 5px;
     text-decoration: none;
 }
 
 nav li a:hover {
-    color: #009999;
+    #color: #009999;
+    color: #5086B0;
     text-decoration: underline;
     background-color: transparent;
 
 }
 
 nav li a:visited {
-    color: #009999;
+    #color: #009999;
+    color: #5086B0;
 }
 
 /*============================================*/
@@ -73,7 +92,8 @@ nav li a:visited {
 /* Body */
 .canvas {
     min-height: 500px;
-    background: #666666;
+    #background: #666666;
+    background: #000000;
 }
 
 section {
