@@ -1,17 +1,15 @@
-<%= link_to image_tag("icare.png", :alt => "iCare"), root_path, :class => "logo_link" %>
-<div class="search">
-  <% form_tag search_path, :method => :get do %>
-    <%= search_field_tag :search, params[:search], :placeholder => "Search" %>
-      <%= submit_tag "Search", :name => nil %>
-  <% end %>
-</div>
-<nav class="header_nav">
-  <ul>
+<%= link_to "iCare", root_path, :class => "brand" %>
+<% form_tag search_path, :method => :get, :class => "pull-right" do %>
+    <%= text_field_tag :search, params[:search], :placeholder => "Search", :class => "input-small" %>
+    <%= submit_tag "Search", :name => nil, :class => "btn primary" %>
+<% end %>
+<nav>
+  <ul class="nav">
     <% if user_signed_in? %>
-    <li>
-      <%= "#{current_user.email}" %>
-    </li>
-        <% end %>
+        <li>
+          <%= "#{current_user.email}" %>
+        </li>
+    <% end %>
     <li><%= link_to("Home", root_path) %></li>
 
     <% if user_signed_in? %>

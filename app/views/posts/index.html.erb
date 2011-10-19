@@ -1,19 +1,15 @@
-<div>
-   <%= render 'partials/geo_filter' %>
+<%= link_to 'New Post', new_post_path %>
+<div class="filter_container">
+  <%= render 'partials/geo_filter' %>
 </div>
 
-
-
-<table>
-  <tr>
-    <!-- Posts -->
-    <td >
-      <table class="posts">
-        <% if !@posts.nil? %>
-            <% @posts.each do |post| %>
-                <tr>
-                  <td>
-                    <span class="post_price">
+<div class="row">
+  <% if !@posts.nil? %>
+      <% @posts.each do |post| %>
+          <div class="post_spliter">
+            <br />
+            <div class="post">
+                <span class="post_price">
                       <%= price post.price.to_i %>
                     </span>
 
@@ -21,74 +17,42 @@
                       <%= truncate_wrap_link post.title, post, 60, 35 %>
                     </span>
 
-                    <span class="post_content">
+                    <span class="post_content clearboth">
                       <%= truncate_wrap_text post.content, 140, 35 %>
                     </span>
-                    <br>
+              <br>
 
-                    <!-- Photo thumbs -->
-                    <% post.assets.each do |asset| %>
+              <!-- Photo thumbs -->
+              <% post.assets.each do |asset| %>
 
-                        <div class="post_thumb">
-                          <%= image_tag asset.image(:thumb) %>
-                        </div>
+                  <div class="post_thumb">
+                    <%= image_tag asset.image(:thumb) %>
+                  </div>
 
-                    <% end %>
+              <% end %>
 
-                    <br class="clearboth">
+              <br class="clearboth">
 
-                    <div class="post_meta">
-                      <%= time_ago_in_words(post.created_at) %> ago
-                    </div>
+              <div class="post_meta">
+                <%= time_ago_in_words(post.created_at) %> ago
+              </div>
 
+              <div class="post_meta">
+                <%= post.city %>
+              </div>
 
+            </div>
+            <br />
+            <br />
+          </div>
+      <% end %>
 
-                    <div class="post_meta">
-                      <%= post.city %>
-                    </div>
-
-                  </td>
-                </tr>
-            <% end %>
-        <% end %>
-      </table>
-    </td>
-
-    <!-- Photo Gallery -->
-    <td class="photo_gallery">
-
-    </td>
-  </tr>
-</table>
-
-<!--
-<table>
-  <tr>
-    <th>Title</th>
-    <th>Content</th>
-    <th>Location</th>
-    <th></th>
-    <th></th>
-    <th></th>
-  </tr>
-<% if !@posts.nil? %>
-    <% @posts.each do |post| %>
-  <tr>
-    <td><%= post.title %></td>
-    <td><%= post.content %></td>
-    <td><%= post.location %></td>
-    <td><%= link_to 'Show', post %></td>
-    <td><%= link_to 'Edit', edit_post_path(post) %></td>
-    <td><%= link_to 'Destroy', post, :confirm => 'Are you sure?', :method => :delete %></td>
-  </tr>
-<% end %>
-<% end %>
-</table>
--->
+  <% end %>
+</div>
 
 <br/>
 
 <%= will_paginate %>
 
-<%= link_to 'New Post', new_post_path %>
+
 

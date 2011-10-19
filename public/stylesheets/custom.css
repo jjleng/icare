@@ -1,30 +1,60 @@
-.container {
-    width: 710px;
-    margin-left: auto;
-    margin-right: auto;
-    background: transparent;
+html, body {
+    background-color: #eee;
 }
 
+body {
+    padding-top: 40px; /* 40px to make the container go all the way to the bottom of the topbar */
+}
 
-#content_wrapper {
-  background-color: whitesmoke;
-  padding: 1.5em;
-  margin: -1.5em;
-  width: 710px;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
-  -moz-box-shadow: 0 0 5px 5px #888;
-  -webkit-box-shadow: 0 0 5px 5px#888;
-  box-shadow: 0 0 5px 5px #888;
-  z-index: 1;
+.container > footer p {
+    text-align: center; /* center align it with the container */
+}
+
+.container {
+    width: 820px; /* downsize our container to make the content feel a bit tighter and more cohesive. NOTE: this removes two full columns from the grid, meaning you only go to 14 columns and not 16. */
+}
+
+/* The white background content wrapper */
+.content {
+    background-color: #fff;
+    padding-left: 20px;
+    margin: 0 -20px; /* negative indent the amount of the padding to maintain the grid system */
+    -webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    -moz-box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+    box-shadow: 0 1px 2px rgba(0, 0, 0, .15);
+}
+
+/* Page header tweaks */
+.page-header {
+    background-color: #f5f5f5;
+    padding: 20px 20px 10px;
+    margin: -20px -20px 20px;
+}
+
+/* Styles you shouldn't keep as they are for displaying this base example only */
+.content .span9,
+.content .span5 {
+    min-height: 500px;
+}
+
+/* Give a quick and non-cross-browser friendly divider */
+.content .span5 {
+    margin-left: 0;
+    padding-left: 19px;
+}
+
+.topbar .btn {
+    border: 0;
 }
 
 .clearboth {
     clear: both;
 }
 
-.display_block{
+.display_block {
     display: block;
 }
 
@@ -47,104 +77,24 @@ header img {
     margin-top: 1em;
 }
 
-div.search
-{
-    float: left;
-    margin-top: 1em;
-    margin-left: 3em;
-
-}
-
-/* Header Navigation */
-nav {
-    float: right;
-}
-
-nav li {
-    list-style-type: none;
-    display: inline-block;
-    padding: 1em 0;
-    font-size: 12px;
-}
-
-nav li a {
-    #color: #009999;
-    color: #5086B0;
-    padding: 0 5px;
-    text-decoration: none;
-}
-
-nav li a:hover {
-    #color: #009999;
-    color: #5086B0;
-    text-decoration: underline;
-    background-color: transparent;
-
-}
-
-nav li a:visited {
-    #color: #009999;
-    color: #5086B0;
-}
-
 /*============================================*/
 
 /* Body */
-.canvas {
-    min-height: 500px;
-    #background: #666666;
-    background: #000000;
-}
-
-section {
-    clear: both;
-    margin-top: 0em;
-    font-size: 120%;
-    padding: 20px;
-    background: #fff;
-    border: 1px;
-}
-
-/*============================================*/
-
-.gradient {
-    /* default background colour, for all layout engines that don't implement gradients */
-    background: #2a6da9;
-
-    /* gecko based browsers */
-    background: -moz-linear-gradient(top, #55aaee, #003366);
-
-    /* webkit based browsers */
-    background: -webkit-gradient(linear, left top, left bottom, from(#55aaee), to(#003366));
-
-    color: #000000; /* text colour (black) */
-    height: auto; /* gradient uses the full height of the element */
-    padding: 5px; /* distance from border edge to text */
-}
-
-/*=============================================*/
-
-/* Post */
-table.posts {
-    width: 450px;
-    margin-top: 1em;
-}
-
-table.posts tr {
-    height: 100px;
-}
-
-table.posts tr td {
+.post_spliter {
     border-top: 1px solid #ccc;
     vertical-align: top;
-    padding-top: 10px;
+    border-right: 1px solid #ccc;
 }
 
-table.posts tr td .post_title {
-
+.post {
+    margin-left: 1em;
 }
 
-table.posts tr td .post_title a {
+.post_title {
+    float: left;
+}
+
+.post_title a {
     margin-top: 0em;
     vertical-align: top;
     color: #104E8B;
@@ -153,16 +103,18 @@ table.posts tr td .post_title a {
     font-weight: bold;
 }
 
-table.posts tr td .post_title a:hover {
+.post_title a:hover {
+    color: #104E8B;
     background: transparent;
     text-decoration: underline;
 }
 
-table.posts tr td .post_price {
+.post_price {
     color: #cc0000;
     font-size: 85%;
     font-weight: bold;
     margin-right: 1em;
+    float: left;
 }
 
 .post_content {
@@ -190,13 +142,19 @@ table.posts tr td .post_price {
     margin-right: 1em;
 }
 
-
-
-.filter_field
-{
+.filter_field {
     float: left;
     font-size: 85%;
     margin-right: 3px;
+    margin-top: 1em;
+    margin-left: 1em;
 }
+
+.filter_container {
+    margin-left: -20px;
+    margin-bottom: -20px;
+    border-right: 1px solid #ccc;
+}
+
 
 

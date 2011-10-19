@@ -1,8 +1,9 @@
 <% form_tag :geo_search, :method=>':get' do %>
     <div class="field filter_field">
-      With in <%= text_field_tag :within %> miles from <%= text_field_tag :origin %>
+      With in <%= text_field_tag :within, params[:within], :placeholder => "10", :class => "input-small"%>
+      miles from <%= text_field_tag :origin, params[:origin], :placeholder => "zip code or address", :class => "span3" %>
     </div>
     <div class="actions">
-       <%= submit_tag "Search" %>
+       <%= submit_tag "Search", :class => "btn primary" %>
     </div>
 <% end %>
