@@ -1,9 +1,16 @@
 <% form_tag :geo_search, :method=>':get' do %>
-    <div class="field filter_field">
-      With in <%= text_field_tag :within, params[:within], :placeholder => "10", :class => "input-small"%>
-      miles from <%= text_field_tag :origin, params[:origin], :placeholder => "zip code or address", :class => "span3" %>
+    <div class="filter_field">
+      <p>
+        With
+        in <%= text_field_tag :within, params[:within], :placeholder => "10", :class => "input-small line-height:normal" %>
+        miles
+        from <%= text_field_tag :origin, params[:origin], :placeholder => "zip code or address", :class => "span3" %>
+        <!--<button class="btn success help_btn" title="Some text">?</button>-->
+        <a rel="twipsy" href="#" data-original-title="Some title text" class="btn success help_btn">?</a>
+
+      </p>
+      <br/>
+      <%= submit_tag "Search", :class => "btn primary" %>
     </div>
-    <div class="actions">
-       <%= submit_tag "Search", :class => "btn primary" %>
-    </div>
+    <br class="clearboth"/>
 <% end %>

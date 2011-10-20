@@ -1,5 +1,18 @@
-<%= link_to 'New Post', new_post_path %>
-<div class="filter_container">
+<div id="view_swtich_bar">
+  <ul>
+    <li>
+      <%= image_tag("thumnail.png") %>
+    </li>
+    <li>
+      <%= image_tag("title_small.png") %>
+    </li>
+    <li>
+      <%= image_tag("normal_down.png") %>
+    </li>
+  </ul>
+</div>
+
+<div class="filter_container clearboth">
   <%= render 'partials/geo_filter' %>
 </div>
 
@@ -51,6 +64,7 @@
 </div>
 
 <br/>
+<%= link_to 'New Post', new_post_path %>
 
 <%= will_paginate %>
 
