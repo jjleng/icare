@@ -1,13 +1,11 @@
 <% form_tag :geo_search, :method=>':get' do %>
     <div class="filter_field">
       <p>
-        With
-        in <%= text_field_tag :within, params[:within], :placeholder => "10", :class => "input-small line-height:normal" %>
+        Within <%= text_field_tag :within, params[:within], :placeholder => "eg. 10", :class => "input-small line-height:normal" %>
         miles
-        from <%= text_field_tag :origin, params[:origin], :placeholder => "zip code or address", :class => "span3" %>
-        <!--<button class="btn success help_btn" title="Some text">?</button>-->
-        <a rel="twipsy" href="#" data-original-title="Some title text" class="btn success help_btn">?</a>
-
+        from <%= text_field_tag :origin, params[:origin], :placeholder => "eg. 95131", :class => "span3" %>
+        <button class="btn success help_btn" data-original-title="Please input a distance based on a valid zip code or address. eg. Within '10' miles within '2386 Trade Zone Blvd, San Jose, CA'">?</button>
+        <!--<a rel="twipsy" href="#" data-original-title="Some title text" class="btn success help_btn">?</a>-->
       </p>
       <br/>
       <%= submit_tag "Search", :class => "btn primary" %>
